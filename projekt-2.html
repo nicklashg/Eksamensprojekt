@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Præsentationsportfolio</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="banner">
+            <div class="navbar"> 
+                <a href="index.html">
+                <img alt="logo" src="Billeder/logo.png" class="logo">
+                </a>
+                
+                <ul>
+                    <li><a href="projekt-1.html">Projekt 1</a></li>
+                    <li><a href="projekt-2.html">Projekt 2</a></li>
+                    <li><a href="privat-arbejde.html">Egne projekter</a></li>
+                    <li><a href="om-mig.html">Om mig</a></li>
+                </ul>
+            </div>
+
+            <section id="forside">
+                <div class="social-menu">
+                    <ul>
+                        <li><a href="https://www.facebook.com/NicklasGregersen/"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/PapsGrand"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://www.instagram.com/nicklasgregersen/"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/nicklas-gregersen-453a4814a/"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </section>
+    
+            <div class="headline">
+                <h1>
+                Projekt 2
+                </h1>
+            </div>
+            <div class="paragraf">
+                <p1>
+                    <br>I vores andet projekt, var det tid til at lave et installationsprojekt. Hele årgangen <br>
+                    skulle besøge Naturama, som er et museum for dyr. I starten af 2022 vil Naturama have <br>
+                    en udstilling, der omhandler Permtiden. Det var derfor vores opgave, at komme på en <br>
+                    installation, der afdækkede vores opgave. Min gruppe og jeg, valgte at vi ville designe <br>
+                    en app, som gav brugeren en oplevelse af at blive guidet rundt i udstillingen, og samtidig <br>
+                    med at blive nok informeret på permtiden, at besøget ville være alle pengene værd. 
+                </p1>
+            </div>
+
+            <section id="pictures">
+                <div class="picture-3">
+                    <img class="picutre-3a" src="Billeder/Startskærm.png" width="112" height="231.5">
+                </div>
+                <div class="picture-4">
+                    <img class="picutre-4a" src="Billeder/Unlocket.png" width="112" height="231.5">
+                </div>
+            </section>
+
+            <div class="feature-img">
+                <img src="Billeder/video1-billede.png" width="441.6" height="248.4">
+                <img src="Billeder/playbutton.png" class="play-button" onclick="playvideo('Videoer/Video.mp4')">
+            </div>
+
+            <div class="video-player" id="videoplayer">
+                <video width="100%" controls autoplay id="video1">
+                    <source src="Videoer/Video.mp4" type="video/mp4">
+                </video>
+                <img src="Billeder/close-button.png" class="close-button" onclick="stopvideo()">
+            </div>
+        </div>
+
+        <!-- JavaScript til at afspille video -->
+
+        <script>
+            var videoplayer = document.getElementById("videoplayer");
+            var video1 = document.getElementById("video1");
+
+            function stopvideo(){
+                videoplayer.style.display = "none";
+            }
+
+            function playvideo(file){
+                video1.src = file;
+                videoplayer.style.display = "block";
+            }
+        </script>
+    </body>
+</html>

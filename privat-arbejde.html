@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Præsentationsportfolio</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="banner">
+            <div class="navbar"> 
+                <a href="index.html">
+                <img alt="logo" src="Billeder/logo.png" class="logo">
+                </a>
+                
+                <ul>
+                    <li><a href="projekt-1.html">Projekt 1</a></li>
+                    <li><a href="projekt-2.html">Projekt 2</a></li>
+                    <li><a href="privat-arbejde.html">Egne projekter</a></li>
+                    <li><a href="om-mig.html">Om mig</a></li>
+                </ul>
+            </div>
+
+            <section id="forside">
+                <div class="social-menu">
+                    <ul>
+                        <li><a href="https://www.facebook.com/NicklasGregersen/"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/PapsGrand"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://www.instagram.com/nicklasgregersen/"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/nicklas-gregersen-453a4814a/"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </section>
+    
+            <div class="headline-privat-arbejde">
+                <h1>
+                Egne Projekter
+                </h1>
+            </div>
+            <div class="paragraf-privat-arbejde">
+                <p1>
+                    <br>I min fritid har jeg arbejdet meget med animationer og videoredigering, hvor jeg <br>
+                    har redigeret videoer for nogle youtubers og lavet animation overlays for streamers. <br>
+                    Her har jeg fået erfaringer ved at arbejde med kunder og arbejdet sammen med andre <br>
+                    som redigerer videoer proffesionelt for youtubers med millioner af subscribers. Det <br>
+                    har givet mig et indblik i hvordan der bliver arbejdet på tværs af landegrænserne <br>
+                    sammen om et projekt.<br>
+
+                    <br> Nedenunder vil du kunne se mit arbejde indenfor videoredigering og animationer.
+                </p1>
+            </div>
+
+            <section id="videoer">
+                <div class="feature-img2">
+                    <img src="Billeder/video2-billede.png" width="441.6" height="248.4">
+                    <img src="Billeder/playbutton.png" class="play-button2" onclick="playvideo('Videoer/transition.mp4')">
+                </div>
+
+                <div class="video-player2" id="videoplayer2">
+                    <video width="100%" controls autoplay id="video2">
+                        <source src="Videoer/" type="video/mp4">
+                    </video>
+                    <img src="Billeder/close-button.png" class="close-button2" onclick="stopvideo()">
+                </div>
+
+
+                <div class="feature-img3">
+                    <img src="Billeder/video3-billede.png" width="441.6" height="248.4">
+                    <img src="Billeder/playbutton.png" class="play-button3" onclick="playvideo('Videoer/overlay-podcast.mp4')">
+                </div>
+
+                <div class="video-player3" id="videoplayer3">
+                    <video width="100%" controls autoplay id="video3">
+                        <source src="Videoer/overlay-podcast.mp4" type="video/mp4">
+                    </video>
+                    <img src="Billeder/close-button.png" class="close-button3" onclick="stopvideo()">
+                </div>
+            </section>
+
+            
+            <!-- JavaScript til at afspille video -->
+
+            <script>
+                var videoplayer = document.getElementById("videoplayer2");
+                var videoplayer = document.getElementById("videoplayer3");
+                var video2 = document.getElementById("video2");
+                var video3 = document.getElementById("video3");
+
+                function stopvideo(){
+                    videoplayer.style.display = "none";
+                }
+
+                function playvideo(file){
+                    video2.src = file;
+                    video3.src = file;
+                    videoplayer.style.display = "block";
+                }
+            </script>
+        </div>
+    </body>
+</html>
